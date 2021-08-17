@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+    <Description>log4net extensions</Description>
+    <PackageId>Space.Log4Net</PackageId>
+    <Version>1.1.2</Version>
+    <PackageReleaseNotes>仅支持.NetCore 2.2</PackageReleaseNotes>
+    <NoWarn>$(NoWarn)</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>log4net;log4net extensions;netcore log4net;netcore log;</PackageTags>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+    <PackageReleaseNotes>log4net extensions</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="$(log4net)" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="$(MicrosoftAspNetCoreHttpAbstractions)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="$(MicrosoftExtensionsLoggingAbstractions)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Space\Space.csproj" />
+  </ItemGroup>
+
+</Project>

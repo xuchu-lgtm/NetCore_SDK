@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetStandardTargetVersion)</TargetFramework>
+    <Description>1.基础测试包</Description>
+    <PackageTags>Space.Redis.Extensions.Core;Redis;NoSql</PackageTags>
+    <Version>$(Space)</Version>
+    <Company>$(Company)</Company>
+    <Authors>$(Authors)</Authors>
+    <PackageId>Space.Redis.Extensions.Core</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Impementations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="$(JetBrainsAnnotations)" />
+    <PackageReference Include="StackExchange.Redis" Version="$(StackExchangeRedis)" />
+  </ItemGroup>
+
+</Project>

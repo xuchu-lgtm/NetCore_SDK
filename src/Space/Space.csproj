@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+    <Description>1.Space基础包</Description>
+    <PackageTags>SpaceNetCore;Space</PackageTags>
+    <Version>1.1.1</Version>
+    <PackageId>Space.NetCore</PackageId>
+    <PackageReleaseNotes>仅支持.NetCore 2.2</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" Version="$(JetBrainsAnnotations)" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MicrosoftExtensionsDependencyInjectionAbstractions)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(MicrosoftExtensionsConfigurationAbstractions)" />
+  </ItemGroup>
+
+</Project>

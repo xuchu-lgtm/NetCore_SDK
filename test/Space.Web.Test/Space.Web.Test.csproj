@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="log4net.config_bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="log4net.config_bak" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Space.Consul\Space.Consul.csproj" />
+    <ProjectReference Include="..\..\src\Space.DnsClient\Space.DnsClient.csproj" />
+    <ProjectReference Include="..\..\src\Space.HttpClient.Extensions\Space.HttpClient.Extensions.csproj" />
+    <ProjectReference Include="..\..\src\Space.Log4Net.CustomHttpPush\Space.Log4Net.CustomExtensions.csproj" />
+    <ProjectReference Include="..\..\src\Space.Log4Net\Space.Log4Net.csproj" />
+    <ProjectReference Include="..\..\src\Space.Redis\Space.Redis.csproj" />
+    <ProjectReference Include="..\..\src\Space.Web.AspNetCore\Space.Web.AspNetCore.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1development_1json__JsonSchema="http://json.schemastore.org/appveyor" /></VisualStudio></ProjectExtensions>
+
+</Project>

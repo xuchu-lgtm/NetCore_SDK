@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+		<Description>Consul extensions</Description>
+		<PackageId>Space.Consul</PackageId>
+		<Version>1.0.0</Version>
+		<NoWarn>$(NoWarn)</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageTags>Consul;Space.Consul</PackageTags>
+		<IsPackable>true</IsPackable>
+		<IsShipping>true</IsShipping>
+		<PackageReleaseNotes>Consul extensions</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Consul" Version="$(Consul)" />
+		<PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="$(MicrosoftAspNetCoreHostingAbstractions)" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="$(MicrosoftAspNetCoreHttpAbstractions)" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="$(MicrosoftExtensionsConfigurationAbstractions)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="$(MicrosoftExtensionsDependencyInjectionAbstractions)" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(MicrosoftExtensionsOptionsConfigurationExtensions)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Space\Space.csproj" />
+	</ItemGroup>
+
+</Project>

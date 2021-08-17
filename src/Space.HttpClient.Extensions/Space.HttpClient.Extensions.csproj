@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>$(NetCoreTargetVersion)</TargetFramework>
+    <Description>httpclient extensions</Description>
+    <PackageId>Space.HttpClient</PackageId>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes>仅支持.NetCore 2.2 </PackageReleaseNotes>
+    <NoWarn>$(NoWarn)</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PackageTags>httpclient;httpclient extensions;netcore httpclient;</PackageTags>
+    <IsPackable>true</IsPackable>
+    <IsShipping>true</IsShipping>
+    <PackageReleaseNotes>httpclient extensions</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="$(MicrosoftExtensionsHttpPolly)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Space\Space.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+		<Description>DnsClient extensions</Description>
+		<PackageId>Space.DnsClient</PackageId>
+		<Version>1.0.0</Version>
+		<NoWarn>$(NoWarn)</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageTags>DnsClient;Space.DnsClient</PackageTags>
+		<IsPackable>true</IsPackable>
+		<IsShipping>true</IsShipping>
+		<PackageReleaseNotes>DnsClient extensions</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DnsClient" Version="$(DnsClient)" />
+		<PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(MicrosoftExtensionsOptionsConfigurationExtensions)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Space\Space.csproj" />
+	</ItemGroup>
+
+</Project>

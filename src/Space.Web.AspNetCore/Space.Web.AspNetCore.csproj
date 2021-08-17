@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+		<Description>1.Space.Web.AspNetCore基础包</Description>
+		<PackageTags>Space.Web.AspNetCore;Space</PackageTags>
+		<Version>1.1.1</Version>
+		<PackageId>Space.Web.AspNetCore</PackageId>
+		<PackageReleaseNotes>仅支持.NetCore 2.2</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Hosting" Version="$(MicrosoftAspNetCoreHosting)" />
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="$(MicrosoftExtensionsDependencyInjection)" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Space\Space.csproj" />
+	</ItemGroup>
+
+</Project>
