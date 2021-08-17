@@ -9,7 +9,7 @@ namespace Space.Log4Net
     {
         private readonly string _log4NetConfigFile;
 
-        private readonly ConcurrentDictionary<string, Log4NetLogger> _loggers = new ConcurrentDictionary<string, Log4NetLogger>();
+        private readonly ConcurrentDictionary<string, Log4NetLogger> _loggers = new();
 
         public Log4NetProvider(string log4NetConfigFile) => _log4NetConfigFile = log4NetConfigFile;
 
@@ -17,7 +17,7 @@ namespace Space.Log4Net
 
         public ILogger CreateLogger(string categoryName) => _loggers.GetOrAdd(categoryName, CreateLoggerImplementation);
 
-        private Log4NetLogger CreateLoggerImplementation(string name) => new Log4NetLogger(name, ParseLog4NetConfigFile(_log4NetConfigFile));
+        private Log4NetLogger CreateLoggerImplementation(string name) => new(name, ParseLog4NetConfigFile(_log4NetConfigFile));
 
         private static XmlElement ParseLog4NetConfigFile(string fileName)
         {

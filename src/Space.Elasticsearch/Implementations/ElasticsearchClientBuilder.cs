@@ -25,7 +25,7 @@ namespace Space.ElasticSearch.Implementations
         /// <summary>
         /// 对象锁
         /// </summary>
-        private static object _lock = new object();
+        private static readonly object _lock = new();
 
         /// <summary>
         /// 初始化一个<see cref="ElasticSearchClientBuilder"/>类型的实例
