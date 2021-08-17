@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>$(NetCoreTargetVersion)</TargetFrameworks>
+		<Description>仅提供MVC Web导出功能</Description>
+		<PackageTags>Space.Util;EPPlusEx;EPPulusExtensions</PackageTags>
+		<Version>1.0.0-rc1</Version>
+		<PackageId>Space.Util</PackageId>
+		<PackageReleaseNotes>仅支持.NetCore 2.2</PackageReleaseNotes>
+		<AssemblyOriginatorKeyFile>space.snk</AssemblyOriginatorKeyFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="EPPlus" Version="$(EPPlus)" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(MicrosoftAspNetCoreMvcCore)" />
+	</ItemGroup>
+
+</Project>
