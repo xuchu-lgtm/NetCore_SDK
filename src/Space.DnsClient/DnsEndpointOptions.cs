@@ -17,6 +17,6 @@ namespace Space.DnsClient
         /// Consul服务端口
         /// </summary>
         public int Port { get; set; }
-        public IPEndPoint GetIpEndPoint() => new IPEndPoint(IPAddress.Parse(Address), Port);
+        public IPEndPoint GetIpEndPoint() => new(IPAddress.Parse(Address), Port);
     }
 }
