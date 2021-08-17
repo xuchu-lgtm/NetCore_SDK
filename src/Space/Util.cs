@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net;
+using System.Net.Sockets;
 using System.Threading;
 
 namespace Space
@@ -20,6 +22,15 @@ namespace Space
                     Thread.Sleep(1000);
                 }
             }
+        }
+
+        public static string GetEndPoint()
+        {
+            using var socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0);
+            socket.Connect("8.8.8.8", 65530);
+            var endPoint = ((IPEndPoint)socket.LocalEndPoint).Address;
+
+            return endPoint.ToString();
         }
     }
 }

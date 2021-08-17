@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Linq;
 using Consul;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting.Server.Features;
-using Microsoft.AspNetCore.Http.Features;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,9 +34,11 @@ namespace Space.Consul
             var loggerFactory = app.ApplicationServices.GetRequiredService<ILoggerFactory>();
             var logger = loggerFactory.CreateLogger<IApplicationBuilder>();
 
-            var features = app.Properties["server.Features"] as FeatureCollection;
-            var addresses = features?.Get<IServerAddressesFeature>();
-            var address = addresses?.Addresses.First();
+            /* var features = app.Properties["server.Features"] as FeatureCollection;
+             var addresses = features?.Get<IServerAddressesFeature>();
+             var address = addresses?.Addresses.First();*/
+
+            var address = Util.GetEndPoint();
 
             var uri = new Uri(address);
             var registration = new AgentServiceRegistration()
@@ -52,7 +51,7 @@ namespace Space.Consul
                     TCP = $"{uri.Host}:{uri.Port}"
                 },
                 ID = $"{consulConfig.Id ?? Guid.NewGuid()}-{uri.Port}",
-                Name = consulConfig.Name ?? AppDomain.CurrentDomain.FriendlyName.Replace(".",""),
+                Name = consulConfig.Name ?? AppDomain.CurrentDomain.FriendlyName.Replace(".", ""),
                 Address = uri.Host,
                 Port = uri.Port,
                 Tags = consulConfig.Tags,
