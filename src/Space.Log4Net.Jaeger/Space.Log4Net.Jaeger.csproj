@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netcoreapp3.1</TargetFrameworks>
+		<Description>SeqId顺序修复</Description>
+		<PackageId>Space.Log4Net.Jaeger</PackageId>
+		<Version>1.0.3.1</Version>
+		<PackageReleaseNotes>仅支持.NetCore </PackageReleaseNotes>
+		<NoWarn>$(NoWarn)</NoWarn>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<PackageTags>log4net;log4net extensions;netcore log4net;netcore log;Jaeger</PackageTags>
+		<IsPackable>true</IsPackable>
+		<IsShipping>true</IsShipping>
+		<PackageReleaseNotes>log4net extensions</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="log4net" Version="$(log4net)" />
+		<PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="$(MicrosoftAspNetCoreHttpAbstractions)" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.5" />
+		<PackageReference Include="OpenTracing.Contrib.NetCore" Version="$(OpenTracingContribNetCore)" />
+		<PackageReference Include="Jaeger" Version="$(Jaeger)" />
+	</ItemGroup>
+
+</Project>

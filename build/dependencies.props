@@ -28,6 +28,8 @@
 		<MicrosoftAspNetCoreHostingAbstractions>2.2.0</MicrosoftAspNetCoreHostingAbstractions>
 		<EPPlus>4.5.3</EPPlus>
 		<MicrosoftAspNetCoreMvcCore>2.2.0</MicrosoftAspNetCoreMvcCore>
+		<OpenTracingContribNetCore>0.6.2</OpenTracingContribNetCore>
+		<Jaeger>0.3.7</Jaeger>
 	</PropertyGroup>
 
 	<PropertyGroup Label="Package information">
@@ -46,7 +48,7 @@
 		<IncludeSymbols>True</IncludeSymbols>
 		<LangVersion>latest</LangVersion>
 		<NoWarn>1591</NoWarn>
-		<RepositoryUrl>https://gitee.com/winxeos/NetCoreSample</RepositoryUrl>
+		<RepositoryUrl>https://github.com/scapex/NetCore_SDK</RepositoryUrl>
 		<PackageProjectUrl>$(RepositoryUrl)/src/$(MSBuildProjectName)</PackageProjectUrl>
 		<RepositoryType>Git</RepositoryType>
 		<PublicSign Condition="'$(OS)' != 'Windows_NT'">true</PublicSign>
